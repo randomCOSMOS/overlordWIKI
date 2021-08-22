@@ -12,3 +12,13 @@
 
 //     prevScrollpos = currentScrollPos;
 // });
+
+const showSynopsis = () => {
+    $("#synCont").removeClass('hide')
+    $("#more").addClass('hide')
+}
+
+const hideSynopsis = () => {
+    $("#synCont").addClass('hide')
+    $("#more").removeClass('hide')
+}

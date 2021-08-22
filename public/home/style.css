@@ -30,11 +30,11 @@ nav img {
 div{
     width: 90vw;
     color: white;
-    text-align: center;
     margin: 70px auto;
 }
 
-div a {
+div a,
+div a:visited {
     color: rgb(12, 59, 214);
     text-decoration: none;
     font-weight: bold;
@@ -50,9 +50,14 @@ div p {
     font-family: "Averia regular";
 }
 
+.hide {
+    display: none;
+}
+
 .topic {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
+    text-align: center;
 }
 
 .topic img {
@@ -60,7 +65,15 @@ div p {
 }
 
 .synopsis {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
     padding-top: 20px;
+}
+
+.synopsis h2 {
+    text-align: center;
+}
+
+.synopsis p {
+    line-height: 25px;
 }
