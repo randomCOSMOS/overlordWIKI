@@ -1,0 +1,22 @@
+{
+  "name": "overlordwiki",
+  "version": "1.0.0",
+  "description": "A wiki on anime Overlord",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Random-COSMOS/overlordWIKI.git"
+  },
+  "author": "COSMOS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Random-COSMOS/overlordWIKI/issues"
+  },
+  "homepage": "https://github.com/Random-COSMOS/overlordWIKI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

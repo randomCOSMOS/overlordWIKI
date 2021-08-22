@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(./assets/mobile-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+h2 {
+    font-size: 2em;
+    font-family: "Averia bold";
+}
+
+nav{
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    background: #000000;
+    transition: 0.5s;
+}
+
+nav img {
+    height: 50px;
+}
+
+div{
+    width: 90vw;
+    color: white;
+    text-align: center;
+    margin: 70px auto;
+}
+
+div a {
+    color: rgb(12, 59, 214);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+div a:hover {
+    color: white;
+}
+
+div p {
+    padding: 10px;
+    font-family: "Averia regular";
+}
+
+.topic {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+
+.topic img {
+    width: 100%;
+}
+
+.synopsis {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding-top: 20px;
+}
