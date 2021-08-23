@@ -3,6 +3,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -75,12 +76,15 @@ div p {
 
 .row {
     display: flex;
+    justify-content: center;
     margin: 50px 0;
     height: 30vh;
 }
 
 .charCard {
     width: 50%;
+    height: 100%;
+    text-align: center;
 }
 
 .charCard img {
@@ -100,3 +104,8 @@ div p {
 .characters a:hover {
     color: #fc2929;
 }
+
+.nazarick img {
+    width: 100%;;
+}
+
