@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../common/css/font.css">
-    <link rel="stylesheet" href="../common/css/nav.css">
+    <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Ainz Ooal Gown</title>
 </head>
@@ -13,7 +13,27 @@
 <body>
 
     <nav>
-        <a href="/"><img src="../common/assets/logo-gold.png" alt="logo"></a>
+        <a href="/">
+            <img src="../common/assets/logo-gold.png" alt="logo">
+        </a>
+
+        <section class="links">
+            <p onclick="menu()">More <img src="../common/assets/drop down.png" alt="down-arrow"></p>
+            <ul class="hide">
+                <a href="/">
+                    <li>HOME</li>
+                </a>
+                <a href="/chracter">
+                    <li>CHARACTERS</li>
+                </a>
+                <a href="/discuss">
+                    <li>DISCUSS</li>
+                </a>
+                <a href="/merch">
+                    <li>MERCH</li>
+                </a>
+            </ul>
+        </section>
     </nav>
 
     <main>
@@ -85,14 +105,14 @@
                     <aside></aside>
                 </article>
             </section>
-            
+
             <section>
                 <h3>MP:</h3>
                 <article>
                     <div style="width: 20%"></div>
                 </article>
             </section>
-            
+
             <section>
                 <h3>PHY. ATK:</h3>
                 <article>
@@ -150,6 +170,9 @@
         </div>
 
     </main>
+
+    <script src="../common/js/jquery.js"></script>
+    <script src="../common/js/nav.js"></script>
 
 </body>
 

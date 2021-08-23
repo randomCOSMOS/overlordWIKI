@@ -11,7 +11,7 @@ h2 {
     font-family: "Averia bold";
 }
 
-div{
+div {
     width: 90vw;
     color: white;
     margin: 70px auto;
@@ -26,7 +26,8 @@ div a:visited {
 }
 
 div a:hover {
-    color: #fc2929;;
+    color: #fc2929;
+    ;
 }
 
 div p {
@@ -55,10 +56,6 @@ div p {
     text-align: center;
 }
 
-.desktopSyn {
-    display: none;
-}
-
 .synopsis p {
     line-height: 25px;
 }
@@ -78,7 +75,7 @@ div p {
     display: flex;
     justify-content: center;
     margin: 50px 0;
-    height: 30vh;
+    height: 20vh;
 }
 
 .charCard {
@@ -105,7 +102,132 @@ div p {
     color: #fc2929;
 }
 
-.nazarick img {
-    width: 100%;;
+.nazarick h2 {
+    text-align: center;
 }
 
+.nazarick img {
+    width: 100%;
+}
+
+.tombInfo {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.tombInfo h2 {
+    margin-top: 20px;
+}
+
+.tombInfo h3 {
+    text-align: center;
+    font-family: "Averia bold";
+}
+
+.tombInfo b {
+    font-family: "Averia bold";
+}
+
+.desktop {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 400px) {
+    .row {
+        height: 30vh;
+    }
+
+    .topic p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 800px) {
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .topic img {
+        width: 70%;
+    }
+
+    .synopsis p{
+        margin: 0px 10px;
+    }
+
+    .visible {
+        display: block !important;
+    }
+
+    .floorInfo section {
+        display: none;
+    }
+
+    .tombInfo {
+        display: flex;
+    }
+
+    .floors {
+        border-right: 2px solid white;
+        padding: 10px 20px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .floors h3 {
+        margin-top: 10px;
+    }
+
+    .floors h3:last-of-type {
+        margin-bottom: 20px;
+    }
+
+    .floorInfo h4 {
+        font-family: "Averia bold";
+    }
+
+    .floorInfo {
+        display: flex;
+        align-items: center;
+    }
+
+    .floorInfo h3 {
+        font-size: 2em;
+    }
+
+    .floorInfo p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 900px) {
+    .synopsis p {
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .row {
+        height: 40vh;
+    }
+
+    .floors {
+        padding: 20px 40px;
+    }
+
+    .floorInfo {
+        padding: 0px 30px;
+    }
+}
