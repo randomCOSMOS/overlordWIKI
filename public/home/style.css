@@ -1,30 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background: url(./assets/mobile-bg.jpg);
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
 }
-
 
 h2 {
     font-size: 2em;
     font-family: "Averia bold";
-}
-
-nav{
-    top: 0;
-    position: fixed;
-    width: 100vw;
-    background: #000000;
-    transition: 0.5s;
-}
-
-nav img {
-    height: 50px;
 }
 
 div{
@@ -35,23 +18,19 @@ div{
 
 div a,
 div a:visited {
-    color: rgb(12, 59, 214);
+    color: #df0c0c;
     text-decoration: none;
     font-weight: bold;
     transition: 0.2s;
 }
 
 div a:hover {
-    color: white;
+    color: #fc2929;;
 }
 
 div p {
     padding: 10px;
     font-family: "Averia regular";
-}
-
-.hide {
-    display: none;
 }
 
 .topic {
@@ -65,7 +44,8 @@ div p {
 }
 
 .synopsis {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
     border-radius: 20px;
     padding-top: 20px;
 }
@@ -74,6 +54,49 @@ div p {
     text-align: center;
 }
 
+.desktopSyn {
+    display: none;
+}
+
 .synopsis p {
     line-height: 25px;
+}
+
+.characters {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.characters h2 {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    margin: 50px 0;
+    height: 30vh;
+}
+
+.charCard {
+    width: 50%;
+}
+
+.charCard img {
+    height: 100%;
+}
+
+.characters h3 {
+    font-family: "Averia bold";
+    margin-bottom: 20px;
+}
+
+.characters a,
+.characters a:visited {
+    color: white;
+}
+
+.characters a:hover {
+    color: #fc2929;
 }
