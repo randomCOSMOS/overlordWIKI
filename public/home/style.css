@@ -36,7 +36,7 @@ div p {
 }
 
 .topic {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     text-align: center;
 }
@@ -46,7 +46,7 @@ div p {
 }
 
 .synopsis {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border: 2px solid white;
     border-radius: 20px;
     padding-top: 20px;
@@ -60,8 +60,12 @@ div p {
     line-height: 25px;
 }
 
+.hide {
+    display: none;
+}
+
 .characters {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border: 2px solid white;
     text-align: center;
     border-radius: 20px;
@@ -111,7 +115,7 @@ div p {
 }
 
 .tombInfo {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border: 2px solid white;
     text-align: center;
     border-radius: 20px;
@@ -145,7 +149,7 @@ div p {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     h2 {
         font-size: 2.5em;
     }
@@ -162,7 +166,7 @@ div p {
         width: 70%;
     }
 
-    .synopsis p{
+    .synopsis p {
         margin: 0px 10px;
     }
 
@@ -184,6 +188,9 @@ div p {
         background-color: black;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .floors h3 {
@@ -210,11 +217,23 @@ div p {
     .floorInfo p {
         font-size: 1.2em;
     }
+
+    .floorInfo img {
+        width: 70%;
+    }
 }
 
 @media (min-width: 900px) {
     .synopsis p {
         font-size: 1.1em;
+    }
+
+    body {
+        background: url(./assets/desktop-bg.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow-x: hidden;
     }
 }
 
@@ -230,4 +249,14 @@ div p {
     .floorInfo {
         padding: 0px 30px;
     }
+
+    .more,
+    .less {
+        display: none;
+    }
+
+    .extra {
+        display: block;
+    }
+
 }

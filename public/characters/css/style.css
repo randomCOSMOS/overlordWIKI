@@ -1,0 +1,115 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: url(../assets/mobile-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+main,
+h1,
+body>h2 {
+    width: 90vw;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid white;
+    color: white;
+}
+
+main {
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 0px auto 30px auto;
+}
+
+h1 {
+    border-bottom: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 70px auto 0px auto;
+}
+
+body>h2 {
+    margin: 0px auto;
+    border-top: none;
+    border-bottom: none;
+}
+
+h1,
+h2 {
+    color: white;
+    font-family: "Averia bold";
+    text-align: center;
+}
+
+main h2:first-of-type {
+    margin-top: 20px;
+}
+
+main img {
+    width: 100%;
+}
+
+main h3 {
+    font-family: "Special ELite";
+    width: 30%
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+main article {
+    font-family: "Averia regular";
+    width: 70%;
+}
+
+.ability-chart article {
+    position: relative;
+}
+
+.ability-chart article div {
+    height: 90%;
+    background-color: #df0c0c;
+}
+
+.ability-chart article aside {
+    height: 100%;
+    width: 50%;
+    border-right: 3px solid black;
+    position: absolute;
+    top: 0;
+}
+
+@media (min-width: 500px) {
+    main img {
+        height: 85vh;
+        width: auto;
+    }
+}
+
+@media (min-width: 850px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main>*{
+        width: 50%;
+    }
+
+    main img {
+        height: 80vh;
+        width: auto;
+    }
+}
