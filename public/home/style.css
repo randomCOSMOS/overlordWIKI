@@ -3,7 +3,8 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    background-color: black;
 }
 
 h2 {
@@ -36,7 +37,7 @@ div p {
 }
 
 .topic {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     text-align: center;
 }
@@ -46,7 +47,7 @@ div p {
 }
 
 .synopsis {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     border: 2px solid white;
     border-radius: 20px;
     padding-top: 20px;
@@ -65,7 +66,7 @@ div p {
 }
 
 .characters {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     border: 2px solid white;
     text-align: center;
     border-radius: 20px;
@@ -115,7 +116,7 @@ div p {
 }
 
 .tombInfo {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     border: 2px solid white;
     text-align: center;
     border-radius: 20px;
@@ -233,7 +234,7 @@ div p {
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
-        overflow-x: hidden;
+        overflow-x: hidden; 
     }
 }
 

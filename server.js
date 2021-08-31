@@ -13,9 +13,9 @@ database.remove({}, {
 })
 database.loadDatabase();    
 
-app.get('/characters/:name', (req, res) => {
+app.get('/characters/wiki/:name', (req, res) => {
     name = req.params.name
-    res.sendFile(`./public/characters/${name}.html`, {
+    res.sendFile(`./public/characters/wiki/${name}.html`, {
         root: __dirname
     })
 })
