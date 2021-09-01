@@ -3,7 +3,7 @@ const app = express()
 const datastore = require('nedb')
 const port = process.env.PORT || 3000
 
-app.listen(port, () => console.log(`Listning at ${port}!`));
+app.listen(port, () => console.log(`Listning at ${port}! \nVisit http://localhost:3000`));
 app.use(express.static('public'))
 app.use(express.json())
 
