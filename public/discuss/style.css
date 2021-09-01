@@ -1,0 +1,99 @@
+body {
+    background: url(../common/assets/mobile-bg.jpg);
+    background-color: black;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+main {
+    margin: 70px auto;
+    width: 90vw;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+textarea,
+input[type="text"],
+input[type="password"] {
+    background-color: #141414;
+    border: none;
+    color: white;
+    font-family: "Averia Regular";
+    resize: none;
+    overflow: hidden;
+}
+
+textarea {
+    padding: 10px;
+    height: 50px;
+    width: 95%;
+    font-size: 1.2em;
+}
+
+.sign {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.msg {
+    color: white;
+    font-family: "Averia regular";
+    width: 50%;
+    text-align: left;
+}
+
+.sign form {
+    text-align: left;
+    width: 50%;
+}
+
+.sign label {
+    color: white;
+    font-family: "Averia Bold";
+}
+
+.sign input {
+    display: block;
+    font-size: 1em;
+    padding: 5px;
+    width: 100%;
+}
+
+.sign input[type="button"] {
+    all: unset;
+    background-color: #df0c0c;
+    font-family: "Averia regular";
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sign input[type="button"]:hover {
+    background-color: #fc2929;
+}
+
+.sign input[type="button"]:last-of-type {
+    background-color: #131335;
+}
+
+.sign input[type="button"]:last-of-type:hover {
+    background-color: #212150;
+}
+
+@media (min-width: 800px) {
+    body {
+        background: url(../common/assets/desktop-bg.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+}

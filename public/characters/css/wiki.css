@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    background: url(../assets/mobile-bg.jpg);
+    background: url(../../common/mobile-bg.jpg);
+    background-color: black;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -98,6 +99,15 @@ main article {
 }
 
 @media (min-width: 850px) {
+    body {
+        background: url(../../common/desktop-bg.jpg);
+        background-color: black;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
     main {
         display: flex;
         justify-content: space-between;

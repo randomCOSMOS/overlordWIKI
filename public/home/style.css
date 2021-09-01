@@ -1,10 +1,10 @@
 body {
     background: url(./assets/mobile-bg.jpg);
+    background-color: black;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden; 
-    background-color: black;
 }
 
 h2 {
@@ -28,7 +28,6 @@ div a:visited {
 
 div a:hover {
     color: #fc2929;
-    ;
 }
 
 div p {

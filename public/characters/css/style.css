@@ -1,5 +1,6 @@
 body {
-    background: url(../assets/mobile-bg.jpg);
+    background: url(../../common/assets/mobile-bg.jpg);
+    background-color: black;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -15,7 +16,7 @@ main {
     border-radius: 20px;
 }
 
-main h1 {
+h1 {
     color: white;
     font-family: "Averia Bold";
     font-size: 2.5em;
@@ -43,19 +44,50 @@ main h1 {
     margin-bottom: 20px;
 }
 
-.charCard a,
-.charCard a:visited {
+a,
+a:visited {
     text-decoration: none;
-    font-weight: bold;
     transition: 0.2s;
     color: white;
 }
-
-main a:hover {
+a:hover {
     color: #fc2929;
 }
 
+.extra {
+    margin: 70px auto;
+    width: 90vw;
+    text-align: left;
+}
+
+.extra li {
+    font-family: "Averia Regular";
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+
+@media (min-width: 450px) {
+    .mobile-row {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .mobile-row {
+        height: 40vh;
+    }
+}
+
 @media (min-width: 800px) {
+    body {
+        background: url(../../common/desktop-bg.jpg);
+        background-color: black;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
     .desktop-row {
         display: flex;
         height: 50vh;
@@ -67,5 +99,12 @@ main a:hover {
 
     .mobile-row {
         width: 50%;
+        height: 80%;
+    }
+}
+
+@media (min-width: 1250px) {
+    .desktop-row {
+        height: 60vh;
     }
 }
