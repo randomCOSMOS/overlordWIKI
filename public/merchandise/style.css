@@ -1,0 +1,27 @@
+body {
+    background: url(../common/assets/mobile-bg.jpg);
+    background-color: black;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+main {
+    width: 90vw;
+    color: white;
+    margin: 70px auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    body {
+        background: url(../common/assets/desktop-bg.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+}

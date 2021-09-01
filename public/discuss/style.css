@@ -10,11 +10,7 @@ body {
 main {
     margin: 70px auto;
     width: 90vw;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid white;
-    border-radius: 20px;
-    padding: 30px 20px;
-    text-align: center;
+    padding: 30px 10px;
 }
 
 textarea,
@@ -28,11 +24,44 @@ input[type="password"] {
     overflow: hidden;
 }
 
+.comment {
+    display: flex;
+}
+
 textarea {
     padding: 10px;
     height: 50px;
     width: 95%;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    margin: 0px auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+textarea:focus {
+    outline: none;
+    border: 1px solid white;
+    border-right: none;
+}
+
+textarea:focus+input {
+    border: 1px solid white;
+    border-left: none;
+}
+
+.comment input {
+    all: unset;
+    background-color: #df0c0c;
+    font-family: "Averia regular";
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.comment input:hover {
+    background-color: #fc2929;
 }
 
 .sign {
@@ -40,6 +69,10 @@ textarea {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 30px 10px;
 }
 
 .msg {
@@ -47,11 +80,12 @@ textarea {
     font-family: "Averia regular";
     width: 50%;
     text-align: left;
+    display: none;
 }
 
 .sign form {
     text-align: left;
-    width: 50%;
+    width: 90%;
 }
 
 .sign label {
@@ -59,11 +93,16 @@ textarea {
     font-family: "Averia Bold";
 }
 
+.sign input:first-of-type {
+    margin-bottom: 10px;
+}
+
 .sign input {
     display: block;
     font-size: 1em;
     padding: 5px;
     width: 100%;
+    border: 1px solid white;
 }
 
 .sign input[type="button"] {
@@ -88,6 +127,50 @@ textarea {
     background-color: #212150;
 }
 
+.post {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 90vw;
+    margin: 50px auto;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+}
+
+.post p {
+    font-family: "Averia Bold";
+    margin: 10px 0px 0px 10px;
+}
+
+.post b {
+    color: red;
+    cursor: pointer;
+    margin-left: 20px
+}
+
+.post b:hover {
+    text-decoration: underline;
+}
+
+article {
+    font-family: "Averia regular";
+    margin: 0px 10px 10px 10px;
+    font-size: 1.2em;
+}
+
+@media (min-width: 420px) {
+    .msg {
+        display: block;
+    }
+
+    .sign form {
+        width: 50%;
+    }
+
+    .sign input {
+        width: 95%;
+    }
+}
+
 @media (min-width: 800px) {
     body {
         background: url(../common/assets/desktop-bg.jpg);
@@ -95,5 +178,21 @@ textarea {
         background-attachment: fixed;
         background-size: cover;
         overflow-x: hidden;
+    }
+
+    .sign {
+        justify-content: space-around;
+    }
+
+    .sign>*{
+        width: 40%;
+    }
+
+    .msg {
+        font-size: 1.2em;
+    }
+
+    .sign input {
+        width: 80%;
     }
 }

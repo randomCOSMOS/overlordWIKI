@@ -4,7 +4,7 @@ fetch('/loggedIn')
         content1 = `<a onclick="signOut()" href="javascript:void(0)"><li>Sign Out</li></a>`
         if (json.loggedIn) {
             $("nav ul").append(content1)
-            $(".comment").css("display", "block")
+            $(".comment").css("display", "flex")
         } else {
             $(".sign").css("display", "flex")
         }
@@ -14,15 +14,27 @@ fetch("/comments")
     .then(res => res.json())
     .then(json => {
         for (i = 0; i < json.length; i++) {
-            $("form").after(`<div class="test">Comment: ${json[i].comment} Name: ${json[i].name}</div>`)
+            content = `<section class="post">
+            <p>${json[i].author} <i>${json[i].date}</i> <b onclick="remove('${json[i]._id}', '${json[i].author}')">Delete</b></p>
+            <article>${json[i].comment}</article>
+            </section>`
+            $("main").after(content)
         }
     })
 
 const signIn = async () => {
-    const credential = {
+    const data = {
         username: $("#username").val(),
         password: $("#password").val(),
         loggedIn: "true"
+    }
+
+    if (data.username.length == 0) {
+        alert("Username Field Cannot be Empty")
+        return (null)
+    } else if (data.password.length == 0) {
+        alert("Password Field Cannot be Empty")
+        return (null)
     }
 
     const option = {
@@ -30,7 +42,7 @@ const signIn = async () => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(credential)
+        body: JSON.stringify(data)
     };
 
     fetch("/signIn", option)
@@ -39,9 +51,17 @@ const signIn = async () => {
 }
 
 const logIn = () => {
-    const credential = {
+    const data = {
         username: $("#username").val(),
         password: $("#password").val(),
+    }
+
+    if (data.username.length == 0) {
+        alert("Username Field Cannot be Empty")
+        return (null)
+    } else if (data.password.length == 0) {
+        alert("Password Field Cannot be Empty")
+        return (null)
     }
 
     const option = {
@@ -49,7 +69,7 @@ const logIn = () => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(credential)
+        body: JSON.stringify(data)
     };
 
     fetch("/logIn", option)
@@ -64,21 +84,19 @@ const logIn = () => {
                     alert("Password Incorrect")
                 }
             }
-            console.log(json)
         })
 }
 
 const signOut = () => {
-    fetch("/signOut");
-    location.reload();
+    fetch("/signOut")
+        .then(res => res.json())
+        .then(json => json.signOut ? location.reload() : null)
 }
 
-$(".submit").on('click', () => {
-    let comment = $('#comm').val()
-    let name = $('#name').val()
-    const stuff = {
-        comment,
-        name
+const post = () => {
+    const data = {
+        comment: $("textarea").val(),
+        date: new Date().toLocaleString().split(',')[0]
     }
 
     const option = {
@@ -86,13 +104,29 @@ $(".submit").on('click', () => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(stuff)
+        body: JSON.stringify(data)
     };
 
-    fetch("/submit", option)
+    fetch('/post', option)
+}
+
+const remove = (id, author) => {
+    console.log(author)
+    const option = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            id,
+            author
+        })
+    };
+
+    fetch("/remove", option)
         .then(res => res.json())
-        .then(json => console.info(json.response));
-})
+        .then(json => json.authority ? location.reload() : alert("You can't delete this comment as, you are not its author"))
+}
 
 function textAreaAdjust(element) {
     $(element).css("height", "1px");

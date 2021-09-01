@@ -8,7 +8,7 @@ body {
 }
 
 main {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border: 2px solid white;
     width: 90vw;
     margin: 70px auto;
@@ -80,7 +80,7 @@ a:hover {
 
 @media (min-width: 800px) {
     body {
-        background: url(../../common/desktop-bg.jpg);
+        background: url(../../common/assets/desktop-bg.jpg);
         background-color: black;
         background-position: center;
         background-attachment: fixed;

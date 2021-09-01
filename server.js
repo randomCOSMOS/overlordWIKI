@@ -7,11 +7,8 @@ app.listen(port, () => console.log(`Listning at ${port}!`));
 app.use(express.static('public'))
 app.use(express.json())
 
-const database = new datastore('./public/discuss/comments.db');
-const credential = new datastore('./public/discuss/credential.db');
-database.remove({}, {
-    multi: true
-})
+const database = new datastore('./public/discuss/database/comments.db');
+const credential = new datastore('./public/discuss/database/credential.db');
 
 // Serve Files
 app.get('/characters/wiki/:name', (req, res) => {
@@ -29,6 +26,12 @@ app.get('/characters', (req, res) => {
 
 app.get('/discuss', (req, res) => {
     res.sendFile(`./public/discuss/index.html`, {
+        root: __dirname
+    })
+})
+
+app.get('/merch', (req, res) => {
+    res.sendFile(`./public/merchandise/index.html`, {
         root: __dirname
     })
 })
@@ -64,7 +67,6 @@ app.post("/signIn", (req, res) => {
 app.post("/logIn", (req, res) => {
     data = req.body;
     credential.find({username: data.username}, (err, docs) => {
-        // console.log(data.password, docs)
         if (docs.length!==0) {
             if (data.password == docs[0].password) {
                 credential.update({username: data.username}, {$set: {loggedIn: "true"}}, {})
@@ -88,6 +90,9 @@ app.post("/logIn", (req, res) => {
 
 app.get("/signOut", (req, res) => {
     credential.update({loggedIn: "true"}, {$set: {loggedIn: "false"}}, {})
+    res.json({
+        signOut: true
+    })
 })
 
 // comments
@@ -98,11 +103,30 @@ app.get('/comments', (req, res) => {
     })
 })
 
-app.post('/submit', (req, res) => {
+app.post('/post', (req, res) => {
     let data = req.body;
-    database.insert(data)
+    credential.find({loggedIn: "true"}, (err, docs) => {
+        data.author = docs[0].username
+        database.insert(data)
+    })
 
     res.json({
         response: "Comment Added"
     });
+})
+
+app.post('/remove', (req, res) => {
+    data = req.body
+    credential.find({loggedIn: "true"}, (err, docs) => {
+        if (docs[0].username == data.author) {
+            database.remove({_id: data.id});
+            res.json({
+                authority: true
+            })
+        } else {
+            res.json({
+                authority: false
+            })
+        }
+    })
 })

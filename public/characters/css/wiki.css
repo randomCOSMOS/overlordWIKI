@@ -100,7 +100,7 @@ main article {
 
 @media (min-width: 850px) {
     body {
-        background: url(../../common/desktop-bg.jpg);
+        background: url(../../common/assets/desktop-bg.jpg);
         background-color: black;
         background-position: center;
         background-attachment: fixed;
