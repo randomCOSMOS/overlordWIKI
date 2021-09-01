@@ -31,7 +31,7 @@ app.get('/discuss', (req, res) => {
 })
 
 app.get('/merch', (req, res) => {
-    res.sendFile(`./public/merchandise/index.html`, {
+    res.sendFile(`./public/merch/index.html`, {
         root: __dirname
     })
 })
