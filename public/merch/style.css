@@ -17,6 +17,10 @@ main {
     text-align: center;
 }
 
+main h1 {
+    font-family: "Averia Bold";
+}
+
 .item {
     width: 40%;
     text-align: left;
