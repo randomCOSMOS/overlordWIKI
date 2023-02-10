@@ -12,4 +12,4 @@ This Overlord WIKI is dedicated to, Overlord (オーバーロード) anime serie
 3. Run `npm start` to start the server.
 4. Open a preferable browser and visit `localhost:3000`
 
-### You can also visit the website [HERE](https://overlordwiki.herokuapp.com)
+### You can also visit the website [HERE](https://overlordwiki.onrender.com)
