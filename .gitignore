@@ -1,0 +1,4 @@
+node_modules
+package-lock.json
+public/discuss/database/comments.db
+public/discuss/database/credential.db
