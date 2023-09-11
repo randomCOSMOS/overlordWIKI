@@ -118,7 +118,7 @@ app.post('/post', (req, res) => {
 app.post('/remove', (req, res) => {
     data = req.body
     credential.find({loggedIn: "true"}, (err, docs) => {
-        if (docs[0].username == data.author) {
+        if (docs[0].username == ddata.author) {
             database.remove({_id: data.id});
             res.json({
                 authority: true
